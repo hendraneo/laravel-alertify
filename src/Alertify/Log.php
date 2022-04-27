@@ -15,10 +15,10 @@ class Log
     public $message;
 
     /**
-     * The delay in milliseconds to keep the alert shown
+     * The delay in seconds to keep the alert shown
      * @var int $delay
      */
-    public $delay = 4000;
+    public $delay = 5;
 
     /**
      * Close the alert on click?
@@ -37,7 +37,7 @@ class Log
      * The position of the alert
      * @var string $position
      */
-    public $position = 'top right';
+    public $position = 'top-right';
 
     /**
      * The parent that the alert is attached to.

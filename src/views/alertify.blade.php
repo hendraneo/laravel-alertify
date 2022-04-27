@@ -1,10 +1,8 @@
 @if (Session::has('odannyc.alertify.logs'))
     <script>
         @foreach(Session::pull('odannyc.alertify.logs') as $log)
-            alertify.parent({{ $log->parent }});
-            alertify.delay({{ $log->delay }});
-            alertify.logPosition('{{ $log->position }}');
-            alertify.closeLogOnClick({{ $log->clickToClose }});
+            alertify.set('notifier','delay', {{ $log->delay }});
+            alertify.set('notifier','position', '{{ $log->position }}');
 
             alertify.{{ $log->type }}('{{ $log->message }}');
         @endforeach
