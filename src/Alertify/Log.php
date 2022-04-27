@@ -117,10 +117,12 @@ class Log
     public function position(string $position): Log
     {
         $acceptablePositions = [
-            'top right',
-            'top left',
-            'bottom right',
-            'bottom left'
+            'top-right',
+            'top-left',
+            'top-center',
+            'bottom-right',
+            'bottom-left',
+            'bottom-center'
         ];
 
         if (array_search(strtolower($position), $acceptablePositions) === false) {
